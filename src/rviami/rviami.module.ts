@@ -12,7 +12,7 @@ import { CommonModule } from 'src/common/common.module';
     CommonModule
   ],
   exports:[
-    TypeOrmModule
+    // TypeOrmModule
   ]
 })
 export class RviamiModule {}

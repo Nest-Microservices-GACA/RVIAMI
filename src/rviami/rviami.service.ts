@@ -4,7 +4,7 @@ import { CommonService } from 'src/common/common.service';
 import { CreateRviaMiDto } from './dto/create-migration.dto';
 import { envs } from 'src/config';
 
-const addon = require(envs.RVIAPath);
+// const addon = require(envs.RVIAPath);
 
 @Injectable()
 export class RviamiService {
