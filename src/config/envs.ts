@@ -10,6 +10,9 @@ interface EnvVars {
   DB_PORT: number;
   PORT: number;
 
+  RVIA_ENVIRONMENT: number;
+  RVIA_PATH: string;
+
   // USUARIOS_MICROSERVICE_HOST: string;
   // USUARIOS_MICROSERVICE_PORT: number;
 
@@ -25,6 +28,9 @@ const envsSchema = joi.object({
   DB_NAME: joi.string().required(),
   DB_PORT: joi.number().required(),
   PORT: joi.number().required(),
+
+  RVIA_ENVIRONMENT: joi.number().required(),
+  RVIA_PATH: joi.string().required(),
 
   // USUARIOS_MICROSERVICE_HOST: joi.string().required(),
   // USUARIOS_MICROSERVICE_PORT: joi.number().required(),
@@ -55,6 +61,9 @@ export const envs = {
   dbName: envVars.DB_NAME,
   dbPort: envVars.DB_PORT,
   port: envVars.PORT,
+
+  RVIAEnv: envVars.RVIA_ENVIRONMENT,
+  RVIAPath: envVars.RVIA_PATH,
   
   // usuariosMicroserviceHost: envVars.USUARIOS_MICROSERVICE_HOST,
   // usuariosMicroservicePort: envVars.USUARIOS_MICROSERVICE_PORT,

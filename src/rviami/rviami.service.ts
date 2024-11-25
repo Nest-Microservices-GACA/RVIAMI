@@ -2,8 +2,9 @@ import { Injectable, Logger } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { CommonService } from 'src/common/common.service';
 import { CreateRviaMiDto } from './dto/create-migration.dto';
+import { envs } from 'src/config';
 
-const addon = require(process.env.RVIA_PATH);
+const addon = require(envs.RVIAPath);
 
 @Injectable()
 export class RviamiService {
@@ -20,7 +21,7 @@ export class RviamiService {
         try {
     
             const { idu_aplicacion } = createRviaMiDto;
-            // const obj = new addon.CRvia(this.crviaEnvironment);
+            // const obj = new addon.CRvia(envs.RVIAEnv);
             // const lID = aplicacion.idu_proyecto;
             // const lEmployee = aplicacion.user.numero_empleado;
             // const ruta_proyecto = this.encryptionService.decrypt(aplicacion.sourcecode.nom_directorio);
