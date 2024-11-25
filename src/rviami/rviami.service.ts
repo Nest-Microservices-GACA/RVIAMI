@@ -1,6 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
-import { CommonService } from 'src/common/common.service';
 import { CreateRviaMiDto } from './dto/create-migration.dto';
 import { envs } from 'src/config';
 
@@ -12,7 +11,6 @@ export class RviamiService {
     private readonly logger = new Logger('RVIAMIService');
 
     constructor(
-      private readonly encryptionService: CommonService
     ) {
     }
 

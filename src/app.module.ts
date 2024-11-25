@@ -5,16 +5,6 @@ import { envs } from './config';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type:'postgres',
-      host: envs.dbHost,
-      port: envs.dbPort,
-      database: envs.dbName,
-      username: envs.dbUsername,
-      password: envs.dbPassword,
-      autoLoadEntities: true,
-      synchronize:false
-    }),
     RviamiModule
   ],
   controllers: [],
