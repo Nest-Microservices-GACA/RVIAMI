@@ -51,8 +51,11 @@ export class RviamiService {
             //   messageRVIA = ErrorRVIA[initProcessResult];
             // }
         
-            // return { isValidProcess, messageRVIA };
-            return "Hola desde rviami"
+            return { 
+                isProcessStarted: true, 
+                message: "Proceso IA Iniciado Correctamente" 
+            };
+
     
         } catch (error) {
           throw new RpcException({
