@@ -5,7 +5,7 @@ export class CreateRviaMiDto {
 
     @IsNumber()
     @Transform(({ value }) => parseInt(value, 10))
-    idu_aplicacion: number;
+    idu_proyecto: number;
 
     @IsNumber()
     @Transform(({ value }) => parseInt(value, 10))

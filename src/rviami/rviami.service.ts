@@ -18,7 +18,7 @@ export class RviamiService {
 
         try {
     
-            const { idu_aplicacion } = createRviaMiDto;
+            const { idu_proyecto } = createRviaMiDto;
             // const obj = new addon.CRvia(envs.RVIAEnv);
             // const lID = aplicacion.idu_proyecto;
             // const lEmployee = aplicacion.user.numero_empleado;
