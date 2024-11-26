@@ -12,7 +12,7 @@ interface EnvVars {
   // USUARIOS_MICROSERVICE_HOST: string;
   // USUARIOS_MICROSERVICE_PORT: number;
 
-  // NATS_SERVERS: string[];
+  NATS_SERVERS: string[];
 }
 
 const envsSchema = joi.object({
@@ -25,7 +25,7 @@ const envsSchema = joi.object({
   // USUARIOS_MICROSERVICE_HOST: joi.string().required(),
   // USUARIOS_MICROSERVICE_PORT: joi.number().required(),
 
-  // NATS_SERVERS: joi.array().items( joi.string() ).required(),
+  NATS_SERVERS: joi.array().items( joi.string() ).required(),
 
 })
 .unknown(true);
@@ -52,6 +52,6 @@ export const envs = {
   // usuariosMicroserviceHost: envVars.USUARIOS_MICROSERVICE_HOST,
   // usuariosMicroservicePort: envVars.USUARIOS_MICROSERVICE_PORT,
 
-  // natsServers: envVars.NATS_SERVERS,
+  natsServers: envVars.NATS_SERVERS,
 
 };
